@@ -5,7 +5,7 @@ pipeline {
         stage('Hello') {
             steps {
 		    echo 'Hello'
-		    echo "$(pwd)"
+		    sh 'pwd'
                 // checkout scmGit(branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'demoGithub', url: 'https://github.com/rincool/demoKatalon']])
             }
         }
